@@ -1,9 +1,9 @@
 module Rack
   class XFrameOptions
 
-    def initialize(app, value = "DENY")
+    def initialize(app, value = "SAMEORIGIN")
       @app = app
-      @value = value
+      @value = value.upcase
     end
 
     def call(env)

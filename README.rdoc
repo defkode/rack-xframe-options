@@ -12,11 +12,11 @@ gem "rack-xframe-options"
 
 
 = Usage
-use Rack::XFrameOptions ("DENY" is default)
+use Rack::XFrameOptions ("SAMEORIGIN" is default)
 
 or
 
-use Rack::XFrameOptions, "SAMEORIGIN"
+use Rack::XFrameOptions, "DENY"
 
 
 == Note on Patches/Pull Requests

@@ -14,7 +14,7 @@ class TestRackXframeOptions < Test::Unit::TestCase
       setup do
         def app
           Rack::Builder.new do
-            use Rack::XFrameOptions
+            use Rack::XFrameOptions, "DENY"
             run SampleApp.new
           end
         end
@@ -30,7 +30,7 @@ class TestRackXframeOptions < Test::Unit::TestCase
       setup do
         def app
           Rack::Builder.new do
-            use Rack::XFrameOptions, "SAMEORIGIN"
+            use Rack::XFrameOptions
             run SampleApp.new
           end
         end
