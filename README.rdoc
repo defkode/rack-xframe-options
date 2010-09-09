@@ -6,6 +6,19 @@ The X-Frame-Options HTTP response header can be used to indicate whether or not 
 * https://developer.mozilla.org/en/The_X-FRAME-OPTIONS_response_header
 * http://blogs.msdn.com/b/ie/archive/2009/01/27/ie8-security-part-vii-clickjacking-defenses.aspx
 
+= Installation
+
+gem "rack-xframe-options"
+
+
+= Usage
+use Rack::XFrameOptions ("DENY" is default)
+
+or
+
+use Rack::XFrameOptions, "SAMEORIGIN"
+
+
 == Note on Patches/Pull Requests
  
 * Fork the project.
